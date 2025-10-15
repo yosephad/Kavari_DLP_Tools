@@ -1,0 +1,43 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>DLP Settings</title>
+  <style>
+    body{font-family:Arial;padding:16px;max-width:780px}
+    label{display:block;margin:8px 0}
+    textarea{width:100%;height:100px}
+    input[type=text]{width:100%}
+    .small{font-size:13px;color:#666}
+    button{padding:8px 10px;border-radius:6px;cursor:pointer}
+  </style>
+</head>
+<body>
+  <h2>DLP Mail Blocker Settings</h2>
+
+  <label>Enabled: <input id="enabled" type="checkbox"></label>
+
+  <label>Personal domains (comma separated) <span class="small">e.g. gmail.com, yahoo.com</span>
+    <input id="personal_domains" type="text"/>
+  </label>
+
+  <label>Whitelist domains (comma separated) <span class="small">domains that are allowed even if personal</span>
+    <input id="whitelist_domains" type="text"/>
+  </label>
+
+  <label>PII patterns (JSON object of name:regex)</label>
+  <textarea id="pii_patterns_json"></textarea>
+
+  <label><input id="block_on_pii" type="checkbox"/> Block sending if PII detected</label>
+  <label><input id="allow_override" type="checkbox"/> Allow override with logging</label>
+
+  <div style="margin-top:12px;">
+    <button id="saveBtn">Save</button>
+    <button id="resetBtn">Reset Defaults</button>
+    <span id="status" style="margin-left:10px"></span>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>DLP Mail Blocker</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <h3>KAVARI - DLP Mail Blocker</h3>
+    <div>
+      <label><input id="enabled" type="checkbox"> Enabled</label>
+    </div>
+    <div>
+      <button id="openOptions">Open Settings</button>
+      <button id="clearLogs">Clear Logs</button>
+    </div>
+    <hr/>
+    <div id="logsArea">
+      <h4>Recent Events</h4>
+      <div id="logsList">Loading...</div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
